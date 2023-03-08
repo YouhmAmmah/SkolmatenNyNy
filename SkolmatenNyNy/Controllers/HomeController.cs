@@ -8,5 +8,9 @@ namespace SkolmatenNyNy.Controllers
         {
             return View();
         }
+        public IActionResult Overlag()
+        {
+            return View();
+        }
     }
 }
