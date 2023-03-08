@@ -1,0 +1,29 @@
+﻿@model List<SkolmatenNyNy.Models.Mat>
+<!DOCTYOPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Matsidan</h1>
+    <table>
+        <thead>
+            <tr>
+                <td><strong>Maten:</strong></td>
+                <td><strong>Betyg:</strong></td>
+                <td><strong>Matens fulla detaljer</strong></td>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var mat in Model)
+                {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => mat.Maten)</td>
+                    <td>@Html.DisplayFor(modelItem => mat.Betyg)</td>
+                    <td><a asp-action="Detaljer" asp-route-id="@mat.Id">Visa mer info</a></td>
+                </tr>
+                }
+
+        </tbody>
+    </table>
+</body>
+</html>
