@@ -34,13 +34,11 @@ namespace SkolmatenNyNy.Controllers
 
             return matLista;
         }
+
+        //Constructor (mindre för att det finns en i model)
         private Mat SkapaMat(int id, string maten, int betyg, string beskrivning)
         {
-            Mat mat = new Mat();
-            mat.Id = id;
-            mat.Maten = maten;
-            mat.Betyg = betyg;
-            mat.Beskrivning = beskrivning;
+            Mat mat = new Mat( id, maten, betyg, beskrivning);
             return mat;
         }
     }

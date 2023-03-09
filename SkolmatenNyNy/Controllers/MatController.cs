@@ -22,9 +22,11 @@ namespace SkolmatenNyNy.Controllers
         private List<Mat> SkapaMatLista()
         {
             List<Mat> matLista = new List<Mat>();
-
+            
             Mat minMat = SkapaMat(1, "Fiskpanetter", 4, "Överanvänd, men ok");
             matLista.Add(minMat);
+            
+            matLista.Add(new Mat(20, "Pasta carbonara", 9, "Väldigt god, med gräddig"));
 
             minMat = SkapaMat(2, "Chili con carne", 7, "God, får nachos ibland");
             matLista.Add(minMat);
@@ -37,11 +39,7 @@ namespace SkolmatenNyNy.Controllers
         }
         private Mat SkapaMat(int id, string maten, int betyg, string beskrivning)
         {
-            Mat mat = new Mat();
-            mat.Id = id;
-            mat.Maten = maten;
-            mat.Betyg = betyg;
-            mat.Beskrivning = beskrivning;
+            Mat mat = new Mat(id, maten, betyg, beskrivning);
             return mat;
         }
     }
