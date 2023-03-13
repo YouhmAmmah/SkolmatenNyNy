@@ -11,6 +11,7 @@ namespace SkolmatenNyNy.Controllers
         public IActionResult Overlag()
         {
             return View();
+
         }
     }
 }
