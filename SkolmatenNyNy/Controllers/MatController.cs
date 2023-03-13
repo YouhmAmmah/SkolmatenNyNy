@@ -29,7 +29,7 @@ namespace SkolmatenNyNy.Controllers
             minMat = SkapaMat(2, "Chili con carne", 7, "God, får nachos ibland");
             matLista.Add(minMat);
 
-            minMat = SkapaMat(3, "Veggopajer", 9, "Väldigt god men ingen kött");
+            minMat = SkapaMat(3, "Veggopajer", 9, "Väldigt adadadod menen kött");
 
             matLista.Add(minMat);
 
