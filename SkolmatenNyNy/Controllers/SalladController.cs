@@ -21,8 +21,8 @@ namespace SkolmatenNyNy.Controllers
             using (MatContext db = new MatContext())
             {
                 List<Mat> matLista = db.Ratter.ToList();
-                Mat valdMat = matLista.FirstOrDefault(model => model.Id == id);
-                return View(valdMat);
+                return View();
+                //15 09
             }
 
         }
