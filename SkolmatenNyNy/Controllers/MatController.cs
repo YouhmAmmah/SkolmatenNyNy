@@ -5,18 +5,23 @@ namespace SkolmatenNyNy.Controllers
 {
     public class MatController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index()      
         {
-            List<Mat> matLista = SkapaMatLista();
+            using (MatContext db = new MatContext())
+            {
+                List<Mat> matLista = db.Ratter.ToList();
+                return View(matLista);
+            }
 
-            return View(matLista);
         }
 
         public IActionResult Detaljer(int id) 
         {
-            List<Mat> matLista = SkapaMatLista();
-            Mat valdMat = matLista.FirstOrDefault(model => model.Id == id);
-            return View(valdMat);
+            using (MatContext db = new MatContext())
+            {
+                List<Mat> matLista = db.Ratter.ToList();
+                return View();
+            }
         }
     }
 }
